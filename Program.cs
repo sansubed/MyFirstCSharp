@@ -1,20 +1,19 @@
-﻿namespace CSharpLearning
+﻿using System.ComponentModel;
+using System.Runtime.InteropServices.Marshalling;
+
+namespace CSharpLearning
 {
+   
     class Program
     {
+       // vtable functions; //array of pointers to function implementations for a given class, compiler wil suppy each v-table
         int a;
         int b;
         public Program()
         {
 
         }
-        public Program(int a1)
-        {
-
-            a = a1;
-
-
-        }
+       
 
         public Program(int a1, int b1)
         {
@@ -26,7 +25,9 @@
             Console.WriteLine("Hello, Santona!");
         }
 
+       
         
+
 
         public bool PrintMessage(int a, int b)
         {
@@ -37,12 +38,13 @@
             else return false;
         }
 
+
         //ProgramTest inherits class Program -> child class
         class ProgramTest : Program
         {
-            
-            
-            public int PrintMessage(int a)
+           
+            //overrides the parent method and uses it. -> parent can't do this, only child can do this
+            public int  PrintMessage(int a)
             {
                 return (a);
             }
@@ -62,9 +64,13 @@
             //Console.WriteLine(obj2.PrintMessage(1));
             Console.WriteLine("I am from class Program: "+obj2.PrintMessage(3,1));
 
+            //*********
            //instantiated an object of the child class and assigned it to a refernce of base class.
+           //**********
             Program obj4 = new ProgramTest();
             obj4.PrintMessage();
+
+            //child can have the parents quality but the parent class cannot acquire the child's character
             //using the method of the parent class 
             Console.WriteLine("I am object 4 which is object of child class but assigned to parent class "+obj4.PrintMessage(1,2));
             
