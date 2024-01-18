@@ -8,7 +8,7 @@
 dotnet run 
 ```
 
-###Alternatively, when code does not run try this: 
+### Alternatively, when code does not run try this: 
 #### Package manager console
 ```
 dotnet restore --no-cache --force
