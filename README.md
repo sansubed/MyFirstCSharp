@@ -3,6 +3,10 @@
 #### .Net 8.0
 #### Place the solution in the same directory as the project.
 #### check mark the don't use top level ..
+#### run the below command to execute the code
+```
+dotnet run 
+```
 #### Package manager console
 ```
 dotnet restore --no-cache --force
