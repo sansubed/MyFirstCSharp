@@ -1,6 +1,6 @@
 # Create a new project
-Name the project
-.Net 8.0
+## Name the project
+## .Net 8.0
 Place the solution in the same directory as the project.
 check mark the don't use top level ..
 Package manager console
@@ -11,5 +11,5 @@ On to the right, click right on the project
 Properties -> Debug -> General -> Open Debug -> On CLA -> 
 ```
 /C Test.exe <name of your project starting in caps>
-
+```
 ctrl + F5 to run the code now
